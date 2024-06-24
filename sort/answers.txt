@@ -1,0 +1,24 @@
+sort1 uses: Bubble sort
+
+How do you know?:
+Bubble sort has big O of n2 and Omega of n.  It differs greatly if the sample is sorted vs random/reversed.
+The sorted numbers ran through the algorithm the quickest, and there was a great time difference between an already sorted sample
+and the random sample.
+
+sort2 uses: Merge sort
+
+How do you know?:
+Merge sort has big O notation of nlogn and Omega of nlogn.  Merge sort does not differ much between
+sorted and randomized lists, but works more quickly compared to selection sort which has big O of n2 and omega of n2
+
+sort3 uses: Selection sort
+
+How do you know?: Selection sort has big O of n2 and Omega of n2.  There is no significant difference between sorted and unsorted lists.
+It is slower than merge sort since it has n2 notation vs nlogn notation
+
+	    sorted5000	sorted10000	sorted50000	random5000	random10000	random50000	reversed5000	reversed10000	reversed50000
+sort1	0.042	    0.086	    1.55	    0.1	        0.34	    9.8	        0.1	            0.27	        6.5
+sort2	0.035	    0.085	    1.85	    0.05	    0.07	    2.3	        0.03	        0.07	        1.5
+sort3	0.065	    0.19	    5	        0.06	    0.19	    4.5	        0.07	        0.2	            4.5
+
+

@@ -1,0 +1,6 @@
+Average energy = .659
+Average valence = .48444
+Average danceability = .71646
+
+Those numbers may be the average of the top 100 songs but the user may only play the top 10 songs 90% of the time
+Perhaps a weighted average of the energy valence and danceability using a weighted average of the amount of time spent listening to each song.
