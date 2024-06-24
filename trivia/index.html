@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            function colorChange(element, color) {
+            element.style.backgroundColor = color;
+            if (color == 'red') {
+                document.getElementById("response1").innerHTML = 'Incorrect';
+            }
+            else {
+                document.getElementById("response1").innerHTML = 'Correct';
+            }
+
+            }
+
+            function shortAnswer(){
+                if (document.getElementById("shortanswer").value.toLowerCase() == "rabbit island") {
+                    document.getElementById("response2").innerHTML = "Correct";
+                    document.getElementById("shortanswer").style.backgroundColor = "green";
+
+
+                }
+                else {
+                    document.getElementById("response2").innerHTML = "Incorrect";
+                    document.getElementById("shortanswer").style.backgroundColor = "red";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3> What animal eats its own poo?</h3>
+                <button onclick="colorChange(this, 'green')">Rabbit</button>
+                <button onclick="colorChange(this, 'red')">Horse</button>
+                <button onclick="colorChange(this, 'red')">Lion</button>
+                <button onclick="colorChange(this, 'red')">Giraffe</button>
+                <p id="response1"></p>
+                <!-- TODO: Add multiple choice question here -->
+
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>What is the more well known name of Okunoshima?</h3>
+                <input id="shortanswer" type="text">
+                <button type="submit" onclick="shortAnswer()">Check Answer</button>
+                <p id="response2"></p>
+            </div>
+        </div>
+    </body>
+</html>
